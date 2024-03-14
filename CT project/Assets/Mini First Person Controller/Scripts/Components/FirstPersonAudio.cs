@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using UnityEngine;
 
 public class FirstPersonAudio : MonoBehaviour
@@ -53,8 +53,8 @@ public class FirstPersonAudio : MonoBehaviour
         if (crouch)
         {
             crouchStartAudio = GetOrCreateAudioSource("Crouch Start Audio");
-            crouchStartAudio = GetOrCreateAudioSource("Crouched Audio");
-            crouchStartAudio = GetOrCreateAudioSource("Crouch End Audio");
+            crouchedAudio = GetOrCreateAudioSource("Crouched Audio");
+            crouchEndAudio = GetOrCreateAudioSource("Crouch End Audio");
         }
     }
 

@@ -16,7 +16,7 @@ public class Crouch : MonoBehaviour
     [HideInInspector]
     public float? defaultHeadYLocalPosition;
     public float crouchYHeadPosition = 1;
-    
+
     [Tooltip("Collider to lower when crouched.")]
     public CapsuleCollider colliderToLower;
     [HideInInspector]
@@ -24,7 +24,6 @@ public class Crouch : MonoBehaviour
 
     public bool IsCrouched { get; private set; }
     public event System.Action CrouchStart, CrouchEnd;
-
 
     void Reset()
     {
@@ -62,7 +61,7 @@ public class Crouch : MonoBehaviour
 
                 // Get lowering amount.
                 float loweringAmount;
-                if(defaultHeadYLocalPosition.HasValue)
+                if (defaultHeadYLocalPosition.HasValue)
                 {
                     loweringAmount = defaultHeadYLocalPosition.Value - crouchYHeadPosition;
                 }
@@ -109,12 +108,11 @@ public class Crouch : MonoBehaviour
         }
     }
 
-
     #region Speed override.
     void SetSpeedOverrideActive(bool state)
     {
         // Stop if there is no movement component.
-        if(!movement)
+        if (!movement)
         {
             return;
         }
